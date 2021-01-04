@@ -13,8 +13,8 @@ public partial class cp_Logout : System.Web.UI.Page
         {
             if (!IsPostBack)
             {
-                //Response.Cookies["Username"].Expires = DateTime.Now.AddSeconds(-1);
-                Response.Cookies["Username"].Expires = DateTime.Now.AddSeconds(-1);
+                Response.Cookies["AdminId"].Expires = DateTime.Now.AddSeconds(-1);
+                Response.Cookies["AdminName"].Expires = DateTime.Now.AddSeconds(-1);
                 Session.Clear();
                 Session.Abandon();
             }
